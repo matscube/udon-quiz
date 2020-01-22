@@ -1,5 +1,7 @@
 <template>
   <div>
+    result
+    <button @click="tweet">ツイートする</button>
   </div>
 </template>
 
@@ -8,6 +10,11 @@
 export default {
   name: 'app-result',
   components: {
+  },
+  methods: {
+    tweet() {
+      console.info('tweet')
+    },
   }
 }
 </script>

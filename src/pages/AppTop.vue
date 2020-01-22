@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-visual">
-      <button class="button">テスト</button>
+      <button class="button" @click="testStart">テスト</button>
     </div>
   </div>
 </template>
@@ -11,6 +11,11 @@
 export default {
   name: 'app-top',
   components: {
+  },
+  methods: {
+    testStart() {
+      this.$router.push({ name: 'sheet' })
+    },
   }
 }
 </script>
