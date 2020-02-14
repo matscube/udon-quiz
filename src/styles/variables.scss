@@ -1,1 +1,21 @@
-$navigation-height: 56px;
+// responsive threshold
+$pc-min-width: 1024px;
+$tablet-max-width: 1023px;
+$tablet-min-width: 768px;
+$sp-max-width: 767px;
+
+$navigation-height: 50px;
+$navigation-height-sp: 100px;
+
+$header-height: $navigation-height;
+$footer-height: 120px;
+
+$base-color-first: #6ABAFF;
+$base-color-second: #397AB3;
+$base-color-third: #134169;
+
+$contents-color-first: #C4CC41;
+$contents-color-second: #ACB342;
+
+$sub-color-first:#FFA19E;
+$sub-color-second: #FF8A85;

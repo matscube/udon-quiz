@@ -1,6 +1,6 @@
 <template>
-<div>
-  <b-navbar toggleable="lg" type="dark" variant="info" fixed="top">
+<div class="the-navigation-bar">
+  <b-navbar class="navigation-bg" toggleable="lg" type="dark" fixed="top">
     <b-navbar-brand
       class="navigation-link"
       :to="{ name: 'top' }"
@@ -30,7 +30,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.the-navigation-bar {
+  height: $navigation-height;
+}
+.navigation-bg {
+  background-color: $base-color-first;
+}
 .navigation-link {
 
 }
+
+@media screen and (max-width:$sp-max-width) {
+  .the-navigation-bar {
+    height: $navigation-height-sp;
+  }
+  .navigation-link {
+    font-size: 3rem;    
+  }
+}
+
 </style>
