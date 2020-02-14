@@ -16,8 +16,9 @@ export default {
 
 <style lang="scss" scoped>
 .button {
+  min-width: 400px;
   color: white;
-  background-color: $contents-color-first;
+  background-color: $sub-color-first;
   font-weight: bold;
 }
 </style>

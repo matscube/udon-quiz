@@ -11,14 +11,14 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 require('@/styles/index.scss')
 
-Vue.config.productionTip = false
+import store from 'store/index'
+
 
 import App from 'pages/App.vue'
 import AppTop from 'pages/AppTop.vue'
 import AppSheet from 'pages/AppSheet.vue'
 import AppResult from 'pages/AppResult.vue'
 
-Vue.config.productionTip = false
 
 const routes = [
   {
@@ -42,7 +42,10 @@ const router = new VueRouter({
   routes
 })
 
+Vue.config.productionTip = false
+
 new Vue({
   render: h => h(App),
   router,
+  store,
 }).$mount('#app')

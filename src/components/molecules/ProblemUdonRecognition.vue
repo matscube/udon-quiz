@@ -1,14 +1,18 @@
 <template>
 <b-row align-h="center">
   <b-col cols="12" md="6" class="d-flex justify-content-center">
-    <b-img blank blank-color="#ccc" width="300" alt="placeholder"></b-img>
+    <!-- <b-img blank blank-color="#ccc" width="300" alt="placeholder"></b-img> -->
+    <!-- <b-img :src="imageSrc" width="300" alt="placeholder"></b-img> -->
+    <!-- <b-img :src="require('@/assets/udon/udon-kake.jpg')" width="300" alt="placeholder"></b-img> -->
+    <b-img :src="imageSrc" width="300" alt="placeholder"></b-img>
+    <!-- <img src="@/assets/udon/udon-kake.jpg" width="300" alt="placeholder"> -->
   </b-col>
   <b-col cols="12" md="6" class="text-content">
     <b-form-group label="選択肢">
       <template v-for="(option, key) in options">
         <b-form-radio
           class="radio"
-          name="some-radios"
+          :name="radioKey"
           :key="key"
           :value="key"
           v-model="selected"
@@ -30,6 +34,10 @@ export default {
   components: {
   },
   props: {
+    radioKey: String,
+    id: Number,
+    image: String,
+    answer: Number,
     options: Array,
   },
   data() {
@@ -45,10 +53,18 @@ export default {
         return this.options[this.selected].text
       }
     },
+    imageSrc() {
+      // return 'require(@/assets/' + this.image + ')'
+      // return require('@/assets/udon/udon-bukkake.jpg')
+      return require('@/assets/' + this.image)
+    },
   },
   methods: {
     change(value) {
-      this.$emit('change', { value: value })
+      this.$emit('change', {
+        id: this.id,
+        value: value
+      })
     }
   }
 }
