@@ -4,8 +4,8 @@
     <b-container>
       <b-row>
         <b-col class="sns-icon">
-          <b-img blank blank-color="#ccc" width="50" alt="placeholder"></b-img>
-          Twitter
+          <!-- <b-img blank blank-color="#ccc" width="50" alt="placeholder"></b-img>
+          Twitter -->
         </b-col>
       </b-row>
     </b-container>
